@@ -32,8 +32,8 @@ public class Mail2
 	}
 
 	private void sendEmail() throws MessagingException {
-		String fromUser = "**@gmail.com";  //Enter sender email id
-		String fromUserPassword = "***";//Enter sender gmail password , this will be authenticated by gmail smtp server
+		String fromUser = "chaplarbc@gmail.com";  //Enter sender email id
+		String fromUserPassword = "hyga lsty rztm dppn";//Enter sender gmail password , this will be authenticated by gmail smtp server
 		String emailHost = "smtp.gmail.com";
 		
 		Transport transport = newSession.getTransport("smtp");
@@ -47,9 +47,9 @@ public class Mail2
 //		"throwing an exception" in programming, it means that an error or exceptional condition has occurred during the execution of a program.
 //		In Java, when an exceptional condition occurs, you can use the throw keyword to throw an exception manually. This signals that something unexpected or erroneous has happened and allows the program to handle the exceptional condition appropriately
 		
-		String[] emailReceipients = {"**@gmail.com","**@gmail.com"};  //Enter list of email recepients
+		String[] emailReceipients = {"baruaagnila7@gmail.com","baruaagnila7@gmail.com"};  //Enter list of email recepients
 		String emailSubject = "Test Mail";
-		String emailBody = "Test Body of my email";
+		String emailBody = "Hi, this is the body part";
 		mimeMessage = new MimeMessage(newSession);
 //		The MimeMessage class is part of the JavaMail API and represents an email message in MIME (Multipurpose Internet Mail Extensions) format
 		
@@ -68,7 +68,7 @@ public class Mail2
 //	    MimeBodyPart represents a single part of a MIME message. It can contain various types of content, such as plain text, HTML, attachments, etc.
 //		It's typically used to represent the body of an email message or individual attachments.
 		 MimeBodyPart bodyPart = new MimeBodyPart();
-		 bodyPart.setContent(emailBody,"html/text");
+		 bodyPart.setContent(emailBody,"text/html");
 		 
 		 
 //		 MimeMultipart represents a container that holds multiple MimeBodyPart objects. It allows you to create a multipart message by combining multiple body parts.
