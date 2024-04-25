@@ -1,0 +1,86 @@
+Spring and springboot  necessary course:
+Spring:
+Dependency injection(IoC)
+Aspect-Oriented Programmin(AOP)
+ModelView Controller (MVC)
+Data Access (JDBC,ORM)
+Transaction management
+Spring Security
+
+Springboot:
+Quick dev with standalone Spring APp
+Quickly REST full Web services Deployment, Micro Services
+Tomacat, Jetty- Embedded Servers
+Auto config
+Production Ready Feature (Metrics, Health Checks)
+Externalized Config, Deploy management
+Ready to deploy
+
+Core Java:
+1.java prog fundamentals
+2. OOps. Collection Framewrok & Excepion Handling
+
+Spring Framework Basics:
+1. Dependecy injection(IoC)
+2. Aspect Oriented Programming(ASp)
+3. Spring Beans (Java Beans)
+4. Modules , Components, Folder structure
+5. Configuration
+6. MVC Architechture
+
+Database Concepts:
+1. Basic Understanding iof Databases : SQL, JDBC
+
+Java EE/ Web Contents:
+1. Servelet and JSp
+2. Http and RESTFUL APi principles
+
+Maven & Gradle:
+1. Build tools used in Java Projects
+
+Optional:
+Spring Annotations:
+
+Spring MVC:
+Spring MVC:
+Spring Data JPA or JDBC:3 layers access controil
+Spring Security Basics:
+
+
+Purpose of spring boot:  simplifies the dev of prod-ready spring apps with minm config
+
+Apache Tomcat Server setup in eclipse:
+1. Open window>show.. > other> server
+2. On server window, click create new server> Apache> newest version of Tomcat> Manual Setup(downloading zip file etc)/Automatic setup
+Automatic setup: Download and Install> create a folder and select it. it tomcat will be installed automaticaaly.
+
+Servlet cofig:
+ctrl+N >new dynamic web project> tomcat servre+ dynamic web version (latest) + config: default>next>next>generate web xml tick>finish
+
+right click on your project>servlet>package:com.sevletpackage + class name:MyServlet>next>next>finish
+
+starting servlet:
+right click on your project>run on server> tomcat 10>next>next>finish
+Now it will show 404 error on a browser. write your classname in the url. jakarta will be served.
+
+How to open Ui for servlet without error:
+right click on your project>run on server>new>jspfile>dfile name:index.jsp:
+it will open an java server pages(normally we dont use in industry, we send it to a UI framework). in there change the title and add paragraph and anchor the url to your class name. Now 404 error will not show and it will directly open in server.
+
+changing the servelet Ui:
+in doGet() method, in the .appent include: Served at: MyServlet by Agnila in the string. it will reload the servlet page and refresh with new content
+
+It means successfully executed servlet
+
+
+
+
+
+
+
+
+
+
+
+
+
