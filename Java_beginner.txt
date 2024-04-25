@@ -1,0 +1,477 @@
+Java:
+
+Concepts:                    
+jshell: Java REPL(Read Eval Print Loop). getting immediate result. For login use jshell, for logout use /exit in the cmd. it makes java very simple than using ide.
+
+statements: An instruction to the computer to do sth. System.out.println(3*4)
+Calculate 3*4 by using an expression and then print it, this is the instruction. Passing the expression to a predefined method/function of "System.out.println" in java. It will print the outcome in the console
+
+expressions: it has operator (*) and operandans(5,8) like 5* 8
+
+varriables: A variable is sthh whose value can be change over the lifetime ofa program.  int nmb= 10. it can also be changed in 11. Declaration of a variable declares type, name and initial value of the variable. Assignment means replacing any value in the existing variable. 
+
+literals: values that dont change. 5and 8 are also literals in 5*8
+
+if statement:
+
+for loop:
+
+method/function:
+
+Multiplication table programming:
+1. Breakdown of the problem: multiplication of 5 for 10 times
+2. design the solution (possibly break down in simple steps): 1) 5 times each nmb calculate, 2) print it, 3) do it for 10 times
+3. code it with  proper syntax in IDE / jshell: Now, I am using jshell
+
+operators
+expression
+
+operations: the data type of operands are imp as for int, 5/2= 2 but if we use float 5.0/2.0 = 2.5 actual ans show
+
+precedence: * / % has greater precedence than + -. to change the precedence you can use paranthesis.
+
+Case and syntax is imp in jshell. System.out.println(3*4).
+
+Printing a string: you have to use double quotes. this is printing a string literal: System.out.println(3*4)
+
+All class and method everything is case sensetive
+
+ESCAPE CHARACTER: to print double quote put \ before it. System.out.println(" Hello \" world")
+new line: \n, tab: \t single slash: \\ 2slash: \\\\
+
+inbuilt methods: for executing the method always use () for executing.
+System.out.println()
+Math.random()
+Passing multiple parameters: Math.min(23, 405)
+Math.max(133,89)
+
+Instead of doing hardcode of ("5*2=10") as println only allows printing text in the poutput from string; key placing value in printing method: printf
+printf(): this method allows formatting and printing values from expressions. 
+
+System.out.printf("5*2=10").println(); this is passing the resulted string of printf to the println to print. we can also print calculated values through printf. we use a modifier which is %d  for int value, %s for string value, %f for floating point value
+
+ System.out.printf("5 * 2= %d", 5*2).println()
+outcome: 5 * 2= 10
+System.out.printf("5 * 2= %s", "ten").println()
+outcome: 5 * 2= ten
+
+so we are not hardcoding, we are not using string literals.  System.out.printf("%d %d %d", 5,2,3).println()
+outcome: 5 2 3
+
+System.out.printf("%d %d %d", 5,2).println()
+outcome: error, Missing FormatArgument. 
+but it will print without any error, System.out.printf("%d %d", 5,2,3).println()
+outcome: 5 2
+
+in jshell variable value is initialuzed but in ide it is not. we can store previously declared variable in a new variable like int j=i; outcome: j=1. java is a strongly typed language
+
+Variables: 
+1. variables & memory: variable is sth whose value can be changed in time. we have nmb of memorie locations based on the size of computer memory. variable is a keyword to reserve memory for data.
+Memory Location     value     name
+5004			5	i
+5008			10	j
+5012			
+5016
+5020
+5024			110	k
+5028
+5032 
+so 5 value is copied in the memory location of 5004 by i. Actually the value in memory location is changed. This is happening when creating variables. type is also imp in java.
+
+2. Naming a variable: strictly follow to name a variable in java. 
+combination of letters, numbs,  $ and _
+cant start with nmb: int 2mm
+cant be a keyword: int int
+no limit no length of identifier
+camel case:best practice for java. every word starts eith capitalcase except the 1st letter.it makes code readibility and clarity.
+creating variables with good name is imp. must show the meaning of the variable
+
+3. Variable Types:
+4 integer data type. 
+
+byte b:8 bits| -128 to 127; short s: 16 bits(2bytes)| -32768 to 32767; int j: 32 bits(4bytes)| -2147483648 to 214748647; long l: 64 bits| -9223372036854775808 to -9223372036854775807
+
+float: 32 bits, not precise, not used in financials; float f= 4.0f
+double : 64 bits, not precise, not used in financials; double dbl=4.5
+here 4.5 is a literal. floating point constant value is by default a double. float f=4.5 will give error as it is bigger value than 32bits , hence it should be put into double.
+in financials, we use big decimal
+
+char c: 16 bits \u0000to \uffff. char ch='A'. it is not a string hence it can store only a single character and it should be in single quote.
+
+boolean isTrue = false, true or flase. boolean isPrime= true. only can 2 value true or false. it should be always in lower case.
+
+Unerstanding primitive data types: creating variable, choose appropriate var type.
+
+string concatenation: when we ad int + int , its doing addition but if we give string "1" and int , 2. it will give string concatenation "12" , a string. 
+
+4. Assignment operators:assignment is used to copy the value of one variable into another. in assignment value of left hand side is have to be a variable.it can be done with expressions also.int i=10; i=i*2;
+compound assignment operator: i+=2, i-=1
+
+jshell tips:
+1. it support history
+2. ctrl A: start of the line, ctrl E: end of the line
+3. search through all the commands u ran on specific keyword : ctrl R, type the keyword and keep pressing ctrl R
+4....> multiline, if you did not complete the statements
+5. /exit: ends the session, it will not go in previous s=history or recalll variables anymore.
+
+for loop:java syntax is not simple as other for loop function
+1. for(initialization; check a condition; define and update statement)
+then execute the statement
+2. condition either be true or false. so condition always return boolean value.  [Conditional execution like if else.
+
+if, else: if(condition)
+		statement;
+
+comparison operator: equal : == ;coz = means assigning the value into the variable
+semicolon are used to end the statements
+blocks: if(condition){several statements}; here {}is the block.now if will work on the group of statements or else it will only exectue one statement .]
+
+3. example: int i ; for(i=1;i<=10;i++){System.out.printf("%d * %d = %d", 5,i, 5*i).println();}
+i=1: initialization (only for 1st time);  i<=10 : checks the condition always (10 times);i++ : until the condition only this would get executed with updated version (9 times).
+
+Empty statement: for(;i>=10;i++); multilple in statements in initialization and update but only one condition.
+
+for(i=1,j=2; i<=10; i++,j++)
+for loop infinite loop: for(;;); how to stop: ctrl C
+
+summary: literal,  expressions, statements, assignment operator, for loop
+
+long time memorization: 1. active learning with notes and codes;  2. reviewing it weekly
+
+Methods: 
+method syntax: 
+	ReturnType nameOfTheMethod{
+		//Body of the method			
+	}
+
+nameOfTheMethod is like println
+Body of the method: some code inside the method
+ReturnType: type of the ( returning calculation of the method back)
+not type is void.
+
+void sayHelloWorldTwice() {
+System.out.println("Hello world");
+System.out.println("Hello world");
+}
+outcome: created sayHelloWorldTwice() method
+
+we only declaring and defining the method. it wont execute yet. we need to call the method/ invoke the method/ executing the method. 
+sayHelloWorldTwice()
+outcome: 
+Hello world
+Hello world
+
+name of the method also follows the rule of variable and system defining
+
+/save backup.txt would save the following file or anything in the current directory of jshell
+/edit sayHelloWorldTwice. this method will launch an editor. you can edit it in the editor and reflect it in the jshell method if yoy save it
+
+/list sayHelloWorldTwice it will print the entire method
+
+Arguments and parameters:
+sayHelloWorld(5) will print it 5 times whtvr is in the method. This is enhancing the method. It is called an argument. We can pass any arguments in the method by declaring it between the first brackets.
+
+ReturnType nameOfTheMethod(Type ArgumentName){
+		//What we wanna do in the method?		
+	}
+
+void sayHelloWorld(int noOfTimes){
+	//Body of the method
+}
+
+// is a comment. You can edit anything in the method using simple /edit and exit after editinh it in the editor, it will modify the method.
+Creating a method with parameter:
+ void sayHelloWorld(int noOfTimes){
+        for(int i=1;i<=noOfTimes;i++){
+                System.out.println("Hello World");
+        }
+       }
+outcome: created a method called sayHelloWorld()
+
+sayHelloWorld(3);
+outcome: Hello World
+Hello World
+Hello World
+
+If we pass empty argument or string argument, it will give error.
+
+Difference betwn parameters(Method Defination) and arguments(Value passed):
+variable: noOfTimes is a parameter here declared in the method. But here 3 is the argument. it will execute 3 time Hello World.
+hence, inside the code, we give parameter. when we are calling the code, we pass the argument. 
+
+Print Squares Of 1st 5 Numbers:
+void printSquaresOfNumbers(int n)
+	{for(int i  1; i<=n; i++)
+		{System.out.println(i*i);}
+	}
+printSquaresOfNumbers(5)
+outcome:
+1
+4
+9
+16
+25
+
+
+multiplication table method:
+void multiplicationTable(int table)
+	{for(int i=1; i<=10; i++)
+		{System.out.printf("%d * %d = %d",table,i,table*i).println();}
+	}
+multiplicationTable(5);
+outcome:
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+
+Method Overloading: creating two different methods with same name and different parameters. This is good for providing defaults.
+
+void multiplicationTable()
+	{for(int i=1; i<=10; i++)
+		{System.out.printf("%d * %d = %d",5,i,5*i).println();}
+	}
+
+void multiplicationTable(int table)
+	{for(int i=1; i<=10; i++)
+		{System.out.printf("%d * %d = %d",table,i,table*i).println();}
+	}
+
+This method will run without any argument just for 5 and also for any argument. This is called method overloading.
+
+Passing multiple parameters in a method:
+Math.max(1,2)
+
+void sumMultipleParameters(int a,int b)
+	{	int sum = a + b;
+		System.out.println(sum);
+	}
+
+sumMultipleParameters(1,2);
+outcome: 1 + 2 = 3
+
+Programmer target: not writing 1k lines of codes, how to organize it in proper methods and proper classes
+
+returning value of a method:
+Math.max(4,5)
+returning the value in a  variable. $110= 5
+or,
+int max = Math.max(4,5)
+max
+outcome: max = 25
+
+now for a method, there is no method created while returning the value:
+1. void method does not returning back. so we declare the method as int rather than void.
+2. we want to return some values of a method. we want to return a int and calculated value of sum. 
+3. Name of the methoid has to be different from return value variable name.
+
+ int sum2NumPlusOne(int c,int d)
+       {int sum = c + d;
+           return sum;
+       }
+
+sum2NumPlusOne(1,2)
+outcome: $38: 3
+that means method is returning a variable of $38 with int value 3
+
+ex:
+int missingAngle(int angle1, int angle2)
+{	int angle3 = 180 - (angle1 + angle2); 
+	return angle3;
+}
+ missingAngle(45,45);
+outcome: $42 ==> 90
+
+summary:
+defining the method,argumeents, body of the method.
+while calling method, we pass parameters. return a value,
+After creating a method, it is not executed. call/invoke/execute a method.
+No/one/multiple parameter passing but return only one calculated value back.
+
+Primitive data types:char, int etc
+
+Consistency: for remebering a long time: 
+1. have a learning plan. rather thank learning day night just to finish , daily 4-5 hours consistently.
+2. keep it visible like trello
+
+Java Platform: outside of jshell.
+Java code--- Compile code--- Execute it (need to many tools, jdk, dge)
+Platform independece: 
+Basic Instruction: 0,1 that OS understants. Jave , .net would converted to OS speicfic instructions.windows, unix, linux. But we want out java code to run in any os. thats called  platform independence.
+problem: their instructions for each os is different. Java brings an intermediate representation. 
+
+Bytecode: As each OS specific instructions are different. On top of os instructions , it creates Bytecode which is common for all os.This is bytecode.
+It is a format that is common irrespective of the os. 
+Java Virtual Machine (JVM) is a piece of software converts bytecode to basic os specific instructions. They are different for each os.
+
+
+hence, Java solved the problem of platform interdependence by coming up with the intermediate format, bytecode concept and by creating jvms to convert bytecode to os specific instructions.
+
+So, after writing java code, we compile it to bytecode.during compilation, bytecode is generated to run the program in the os. This is called execution. During execution, jvm will convert bytecode into instructions.
+
+Java code
+(compiled)
+Bytecode
+<Run> bytecode
+Windows/Unix/Linux/Any other platform JVM
+Windows/Unix/Linux/Linux instructions
+
+
+Java Class and object: before compiling the code, we need to create class.
+class is a template to create multiple instances. like: country class. there can be china, india etc.
+
+ class Country{}
+outcome: created class Country
+int is a primitive data type that is already defined in java. same country is a class that i am defining a type. I can now create instances/objects of this class.
+
+Name of the class      Instance name = new     Class name()
+Country india = new Country()
+
+Here india is an object type of country class. Type/ class both refers to country. So, using a class(a template0), i can create multiple objects. In classes, we have data, method (to perform action that ispresent in the class).
+
+object: instances of the class.
+
+class Planet{}
+Planet earth = new Planet()
+Planet saturn = new Planet()
+
+Add a feaure to revolve in the planet class. Soln: define the method in the 
+
+class planet
+{
+void revolve()
+	{
+	System.out.println("Revolve"); 
+	}
+}
+
+output:
+|  replaced class planet
+|    update replaced variable earth, reset to null
+|    update replaced variable saturn, reset to null
+
+Now all the instances will be replaced and not have any value. so, redefine it again
+
+planet earth = new planet()
+planet saturn = new planet()
+
+call the revolve method:
+planet.revolve()
+outcome:  Error:
+|  non-static method revolve() cannot be referenced from a static context
+
+normal methods cant be executed outside of the class just calling the class and method name.
+
+To execute a method outside the class, we need to use an object. so we create object and make them perform an action by using method.
+
+earth.revolve();
+outcome: Revolve
+method defines the actions that can be performed on classes.To invoke a method that is inside the class,  we need an object.
+
+example:
+class Country
+{ void comingSoon()
+	{System.out.println("Coming Soon");}
+}
+
+Country india = new Country();
+Country usa = new Country();
+
+usa.comingSoon();
+outcome: Coming Soon
+
+Intro to Exception Coupling
+
+
+
+
+
+
+
+
+App Architecture evolution: Web App> Rest API>Full Stack APP>Microservices
+Java Framework: Spring>Springboot>Hibernate>Spring security>SpringData>Spring Cloud
+Spring: easily maintainable app; dependecy injection and auto wiring
+Springboot
+
+why spring framework is needed:tight coupling>loose coupling>dependecy injection> ioc container>app context>spring beans>auto wiring> component scan
+
+core features of spring framework: iterative approach of Game runner
+Iteration1: tightly coupled java code: GameRunner class, Game classes
+Iteration2: loosely coupling -interfaces: GameRunner class, GamingConsole Interface (Game Classes)
+Iteration3: loosely coupling - SpringLeve1: springBeans, Spring framework (manage object & wiring)
+Iteration4: loosely coupling - SpringLeve2: spring annotations, Spring framework (create, manage & auto wiring objects)
+
+https://start.spring.io/
+
+what is Coupling?
+How much work us involved in changing sth.
+
+
+
+
+
+
+
+
+Maven: For creating project, we either use Gradle.
+Apache Maven is a soft project management and comprehension  tool. Based on the concept of a project object model (pom), maven can manage a project's build, reporting and documentatuin from a central piece of information.
+
+1. create new projects
+2. managing dependencies and their versions. 
+3. build a jar file/war file/docker image to deploy it on a server
+4. run you application locally in Tomcat or jetty or any web server.
+5. run unit teste
+6. deploy to a test or QA or prod envionment
+
+1. Go to start.spring.io> Project: maven, Language:java, Springboot:3.2.4(good to select release version. always avoid snapshot as they are still in built process), Project metadata: Group:similar to package name, Artificate: how u want to refer the project, leave the rest as it is and generate
+2. extract into your designated folder> in eclipse import> maven>select existing maven project> browse the extracted file> finish(it will show a pom file with groupid, artifactidand snapshot version)
+3. in maven, keep source file in src-main-java, keep all resources in src-ain-resources, keep the unit tests in src-test-java, yu can also create source test resources folder
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

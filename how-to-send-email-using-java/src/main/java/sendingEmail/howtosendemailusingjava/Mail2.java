@@ -32,8 +32,8 @@ public class Mail2
 	}
 
 	private void sendEmail() throws MessagingException {
-		String fromUser = "chaplarbc@gmail.com";  //Enter sender email id
-		String fromUserPassword = "hyga lsty rztm dppn";//Enter sender gmail password , this will be authenticated by gmail smtp server
+		String fromUser = "*****@gmail.com";  //Enter sender email id
+		String fromUserPassword = "*****";//Enter sender gmail password , this will be authenticated by gmail smtp server
 		String emailHost = "smtp.gmail.com";
 		
 		Transport transport = newSession.getTransport("smtp");
@@ -47,7 +47,7 @@ public class Mail2
 //		"throwing an exception" in programming, it means that an error or exceptional condition has occurred during the execution of a program.
 //		In Java, when an exceptional condition occurs, you can use the throw keyword to throw an exception manually. This signals that something unexpected or erroneous has happened and allows the program to handle the exceptional condition appropriately
 		
-		String[] emailReceipients = {"baruaagnila7@gmail.com","baruaagnila7@gmail.com"};  //Enter list of email recepients
+		String[] emailReceipients = {"*****@gmail.com","*****@gmail.com"};  //Enter list of email recepients
 		String emailSubject = "Test Mail";
 		String emailBody = "Hi, this is the body part";
 		mimeMessage = new MimeMessage(newSession);
