@@ -24,7 +24,8 @@ public class WeatherServlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-
+ 
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -42,7 +43,7 @@ public class WeatherServlet extends HttpServlet {
 //		System.out.println(inputData);
 		
 		//api setup
-		String apiKey = "7c01339f2a378119fc56cadc0eb3dce0";
+		String apiKey = "*****";
 		//get the city from input
 		String city = request.getParameter("city");
 		//create URL for open weather app request
