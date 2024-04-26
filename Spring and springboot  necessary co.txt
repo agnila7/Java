@@ -46,20 +46,8 @@ Spring MVC:
 Spring Data JPA or JDBC:3 layers access controil
 Spring Security Basics:
 
+
 Purpose of spring boot:  simplifies the dev of prod-ready spring apps with minm config
-
-
-Full stackl Dev:
-Spring boot3: IOC, DI, dependency management,build tools, maven/gradle,java beans
-API/HTTp: Http, restful api, get , post, put, delete, entity
-JDBC-MySQL: SQL CURD, JDBC,MySQL Driver
-Error Handling: Error Debug, Exception Handling
-Springdata JPA: Entities, CRUD Repository, Hibernate, Switching betwn Data Bases
-Spring Security: Spring security Architechture. JWT, Securing API
-Dev Tools: Eclipse, git, linux, 
-
-
-
 
 Apache Tomcat Server setup in eclipse:
 1. Open window>show.. > other> server
@@ -85,26 +73,9 @@ in doGet() method, in the .appent include: Served at: MyServlet by Agnila in the
 It means successfully executed servlet
 
 
-weather app:
 
-user>webpage>server(servlet)>server2(api)
-user submit some input in the web page. web page sends request to a server.
 
-new dynamic web project>  project name: AgnilaWeatherApp>next>tick generate option>next>finish
-right click on AgnilaWeatherApp project> new html file: filename:index.html 
 
-index.html:
-add the title and body. in body, add the text and we have input and submit button in the form section.
-
-To submit input and perform action, servlet will read. create servlet class , it will execute on server.
-right click on AgnilaWeatherApp project>new>servlet>package: and clas name:
-
-application programming interface: when servlet send request to api, api will send the resonse in json format.
-open wather api. in java, setup api, api integration, data retrieve, send the retrieved data to the user
-
-API setup: getting the url of open weather api. so set the apiurl in a stringobject. now in this api, you need an api key and the city name. hence create another two string objects for them. this city will be an input from the user. so create an request of getparam under city stringobject. refer this city stringobject, servlet class and method name in the index.html 
-
-api integration: we have url but we need the connection where we can pass the url param. create url object and pass the apiurl in this object/ hence the apiURL, a string is now transferred in an object now of URL class. now it can make the connection.
 
 
 
