@@ -1,4 +1,5 @@
 package com.weather;
+//this file works only on apache-tomcat-10.1 server.
 
 import jakarta.servlet.ServletException;
 //import jakarta.servlet.annotation.WebServlet;
